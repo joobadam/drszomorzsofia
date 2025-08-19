@@ -78,7 +78,7 @@ export function Layout4() {
                 <Button
                   variant="outline"
                   onClick={handleEmailClick}
-                  className="border border-neutral-dark hover:bg-neutral-light hover:text-foreground text-foreground font-medium px-6 py-3 h-auto rounded-medium transition-all duration-200 bg-transparent flex items-center"
+                  className="border border-neutral-dark hover:bg-neutral-light hover:text-foreground text-neutral-50 font-medium px-6 py-3 h-auto rounded-medium transition-all duration-200 bg-transparent flex items-center"
                   aria-label="Ugrás az email küldéshez"
                   type="button"
                 >

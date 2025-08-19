@@ -74,7 +74,7 @@ export function Footer4() {
             {/* Social Links */}
             <div className="flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end">
               <Link 
-                href="https://facebook.com" 
+                href="https://www.facebook.com/profile.php?id=61579238264671" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-medium hover:bg-primary/10 transition-colors duration-200"
@@ -83,7 +83,7 @@ export function Footer4() {
                 <Facebook className="size-5 text-foreground hover:text-primary transition-colors duration-200" />
               </Link>
               <Link 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/drszomorzsofiaugyved/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 rounded-medium hover:bg-primary/10 transition-colors duration-200"
@@ -91,15 +91,7 @@ export function Footer4() {
               >
                 <Instagram className="size-5 text-foreground hover:text-primary transition-colors duration-200" />
               </Link>
-              <Link 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="p-2 rounded-medium hover:bg-primary/10 transition-colors duration-200"
-                aria-label={t('footer.linkedin')}
-              >
-                <Linkedin className="size-5 text-foreground hover:text-primary transition-colors duration-200" />
-              </Link>
+         
             </div>
           </div>
 
