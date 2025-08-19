@@ -2,8 +2,10 @@
   "navigation": {
     "home": "Home",
     "about": "About",
+    "services": "Services",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "knowledgeBase": "Knowledge Base"
   },
   "home": {
     "title": "Welcome!",
@@ -233,6 +235,22 @@
     "paragraph3": "My expertise covers residential and commercial real estate transactions, ensuring smooth and legally compliant processes for all parties involved.",
     "imageAlt": "Real estate legal services - property contracts and legal documentation"
   },
+  "knowledgeBase": {
+    "title": "Knowledge Base",
+    "subtitle": "Legal knowledge, advice and latest information from the profession",
+    "searchPlaceholder": "Search in knowledge base...",
+    "allCategories": "All categories",
+    "noPostsFound": "No articles found",
+    "noPostsDescription": "Try using different search terms or browse through the categories.",
+    "postNotFound": "Article not found",
+    "backToKnowledgeBase": "Back to Knowledge Base",
+    "readingTime": "Reading time",
+    "share": "Share",
+    "contentComingSoon": "Content coming soon",
+    "relatedPosts": "Related articles",
+    "relatedPostsComingSoon": "Related articles feature coming soon",
+    "browseAllPosts": "Browse all articles"
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "I am happy to be available for any legal question or consultation. Contact me at one of the following contact details!",
@@ -247,6 +265,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "knowledgeBase": "Knowledge Base",
     "contact": "Contact",
     "facebook": "Facebook page",
     "instagram": "Instagram page",

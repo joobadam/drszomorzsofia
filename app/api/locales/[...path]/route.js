@@ -4,7 +4,7 @@ import { join } from 'path';
 
 export async function GET(request, { params }) {
   try {
-    const { path } = params;
+    const { path } = await params;
     const filePath = join(process.cwd(), 'locales', ...path);
     
     // Read the locale file

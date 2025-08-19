@@ -1,5 +1,43 @@
 @import "tailwindcss";
 
+@keyframes loaderAnim {
+  0% {
+    inset: 0 35px 35px 0;
+  }
+  12.5% {
+    inset: 0 35px 0 0;
+  }
+  25% {
+    inset: 35px 35px 0 0;
+  }
+  37.5% {
+    inset: 35px 0 0 0;
+  }
+  50% {
+    inset: 35px 0 0 35px;
+  }
+  62.5% {
+    inset: 0 0 0 35px;
+  }
+  75% {
+    inset: 0 0 35px 35px;
+  }
+  87.5% {
+    inset: 0 0 35px 0;
+  }
+  100% {
+    inset: 0 35px 35px 0;
+  }
+}
+
+.animate-loaderAnim {
+  animation: loaderAnim 2.5s infinite;
+}
+
+.animation-delay {
+  animation-delay: -1.25s;
+}
+
 @theme {
   /* Lawyer Website Design System - Fonts */
   --font-sans: "Inter", system-ui, sans-serif;
@@ -42,6 +80,9 @@
   --radius-small: 6px;
   --radius-medium: 8px;
   --radius-large: 12px;
+
+  /* Loader Animation */
+  --animation-loader: loaderAnim 2.5s infinite;
 
   /* Neutrals színpaletta */
   --color-neutral-white: #ffffff;

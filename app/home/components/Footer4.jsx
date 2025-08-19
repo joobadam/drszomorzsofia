@@ -63,6 +63,12 @@ export function Footer4() {
               >
                 {t('footer.services')}
               </Link>
+              <Link
+                href="/knowledge-base"
+                className="font-semibold text-foreground hover:text-primary transition-colors duration-200"
+              >
+                {t('footer.knowledgeBase')}
+              </Link>
               <Link 
                 href="/contact"
                 className="font-semibold text-foreground hover:text-primary transition-colors duration-200"

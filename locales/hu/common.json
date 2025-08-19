@@ -1,7 +1,9 @@
 {
   "navigation": {
-    "home": "Főoldal",
-    "about": "Rólunk",
+    "home": "Kezdőlap",
+    "about": "Rólam",
+    "services": "Szolgáltatások",
+    "knowledgeBase": "Tudástár",
     "contact": "Kapcsolat",
     "language": "Nyelv"
   },
@@ -233,6 +235,22 @@
     "paragraph3": "Szakértelmem kiterjed lakó- és üzleti ingatlanok ügyletére, biztosítva a gördülékeny és jogszabályi megfelelőséget minden érintett számára.",
     "imageAlt": "Ingatlanjogi szolgáltatások - ingatlan szerződések és jogi dokumentáció"
   },
+  "knowledgeBase": {
+    "title": "Tudástár",
+    "subtitle": "Jogi ismeretek, tanácsok és friss információk a szakmából",
+    "searchPlaceholder": "Keresés a tudástárban...",
+    "allCategories": "Összes kategória",
+    "noPostsFound": "Nem találtunk cikkeket",
+    "noPostsDescription": "Próbálj meg más keresési feltételeket használni vagy nézd át a kategóriákat.",
+    "postNotFound": "A cikk nem található",
+    "backToKnowledgeBase": "Vissza a tudástárhoz",
+    "readingTime": "Olvasási idő",
+    "share": "Megosztás",
+    "contentComingSoon": "A tartalom hamarosan elérhető lesz",
+    "relatedPosts": "Kapcsolódó cikkek",
+    "relatedPostsComingSoon": "A kapcsolódó cikkek funkció hamarosan elérhető lesz",
+    "browseAllPosts": "Összes cikk böngészése"
+  },
   "contact": {
     "title": "Kapcsolatfelvétel",
     "subtitle": "Szívesen állok rendelkezésére bármilyen jogi kérdés vagy konzultáció kapcsán. Vegye fel velem a kapcsolatot az alábbi elérhetőségek egyikén!",
@@ -247,6 +265,7 @@
     "home": "Kezdőlap",
     "about": "Rólam",
     "services": "Szolgáltatások",
+    "knowledgeBase": "Tudástár",
     "contact": "Kapcsolat",
     "facebook": "Facebook oldal",
     "instagram": "Instagram oldal",

@@ -125,7 +125,13 @@ const Navbar = () => {
     { href: "/about", label: t('navigation.about') },
     { href: "/services", label: t('navigation.services') },
     { href: "/contact", label: t('navigation.contact') },
+    { href: "/knowledge-base", label: t('Blog') },
   ];
+
+  // Debug: log the navigation labels
+  console.log('Navigation labels:', navigationLinks.map(link => link.label));
+  console.log('Current language:', currentLanguage);
+  console.log('Knowledge base translation:', t('navigation.knowledgeBase'));
 
 
   return (
@@ -138,7 +144,7 @@ const Navbar = () => {
       <motion.div 
         className={`relative rounded-large shadow-xl border transition-all duration-300 ${
           scrolled 
-            ? 'bg-transparent backdrop-blur-md border-neutral-light shadow-2xl' 
+            ? 'bg-transparent backdrop-blur-md border-neutral-light shadow-2xl ' 
             : 'bg-transparent backdrop-blur-sm border-neutral-light'
         }`}
         whileHover={{ 
