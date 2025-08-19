@@ -23,21 +23,17 @@ export default function LegalNoticePage() {
                   <p className="text-gray-700 mb-2">
                     <strong>{t('legalNotice.name')}:</strong> Dr. Szomor Zsófia Ügyvédi Iroda
                   </p>
+               
                   <p className="text-gray-700 mb-2">
-                    <strong>{t('legalNotice.address')}:</strong> [Cím megadása]
+                    <strong>{t('legalNotice.phone')}:</strong> +36309713467
                   </p>
                   <p className="text-gray-700 mb-2">
-                    <strong>{t('legalNotice.phone')}:</strong> [Telefonszám]
-                  </p>
-                  <p className="text-gray-700 mb-2">
-                    <strong>{t('legalNotice.email')}:</strong> [Email cím]
+                    <strong>{t('legalNotice.email')}:</strong> drszomorzsofia@gmail.com
                   </p>
                   <p className="text-gray-700 mb-2">
                     <strong>{t('legalNotice.barAssociation')}:</strong> Budapesti Ügyvédi Kamara
                   </p>
-                  <p className="text-gray-700">
-                    <strong>{t('legalNotice.attorneyId')}:</strong> [Azonosító szám]
-                  </p>
+                  
                 </div>
               </div>
 
@@ -49,8 +45,8 @@ export default function LegalNoticePage() {
                   {t('legalNotice.servicesDescription')}
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-1 ml-4">
-                  <li>{t('legalNotice.civilLaw')}</li>
                   <li>{t('legalNotice.commercialLaw')}</li>
+                  <li>{t('legalNotice.civilLaw')}</li>
                   <li>{t('legalNotice.laborLaw')}</li>
                   <li>{t('legalNotice.realEstateLaw')}</li>
                   <li>{t('legalNotice.familyLaw')}</li>
