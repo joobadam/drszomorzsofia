@@ -3,13 +3,14 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import { ChevronRight, Phone, Mail } from "lucide-react";
+import { ChevronRight, Phone, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 export function Layout4() {
   const { t } = useLanguage();
   const phoneNumber = "+36309713467";
   const emailAddress = "drszomorzsofia@gmail.com";
+  const address = "1137 Budapest, Szent István krt. 18. 2. em. 4/A. 15ös kapucsengő";
 
   const handleCallClick = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -62,6 +63,19 @@ export function Layout4() {
                       {emailAddress}
                     </a>
                   </div>
+                </div>
+              </div>
+
+              {/* Address block moved below contact details */}
+              <div className="mt-6 md:mt-8 flex items-start gap-3">
+                <MapPin className="size-5 text-white mt-1 flex-shrink-0" />
+                <div>
+                  <h6 className="heading-h6 mb-3 font-bold md:mb-4 text-white">
+                  {t('contact.address')}
+                  </h6>
+                  <span className="text-medium text-white break-words">
+                    {address}
+                  </span>
                 </div>
               </div>
               

@@ -107,8 +107,17 @@ export function Footer4() {
           {/* Bottom Section */}
           <div className="flex flex-col-reverse items-center justify-center justify-items-center pt-6 pb-4 md:flex-row md:gap-x-6 md:pt-8 md:pb-0">
             <div className="grid grid-flow-row grid-cols-[max-content] items-center justify-center justify-items-center gap-y-4 md:grid-flow-col md:gap-x-6 md:gap-y-0">
-              <p className="text-sm text-neutral-dark mt-8 md:mt-0">
-                {t('footer.copyright').replace('{year}', currentYear)}
+              <p className="text-xs text-neutral-dark mt-8 md:mt-0 text-center break-words max-w-xs md:max-w-md">
+                {t('footer.copyright').replace('{year}', currentYear)
+                  .split(' ').map((word, idx, arr) => 
+                    idx < arr.length - 1 ? word + ' ' : word
+                  ).map((word, idx) => (
+                    <React.Fragment key={idx}>
+                      {word}
+                      {(idx + 1) % 7 === 0 && <br />}
+                    </React.Fragment>
+                  ))
+                }
               </p>
               <Link 
                 href="/impressum" 

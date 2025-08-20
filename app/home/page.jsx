@@ -4,7 +4,6 @@ import { Layout89 } from './components/Layout89'
 import { Layout252 } from './components/Layout252'
 import { CTA25 } from './components/CTA25'
 
-
 const Home = () => {
   return (
     <div>

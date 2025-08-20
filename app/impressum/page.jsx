@@ -22,13 +22,16 @@ export default function ImpressumPage() {
                 </h2>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-700 mb-2">
-                    <strong>{t('impressum.serviceProviderName')}:</strong> Dr. Szomor Zsófia Ügyvédi Iroda
+                    <strong>{t('impressum.serviceProviderName')}:</strong> Dr. Szomor Zsófia Egyéni ügyvéd
                   </p>
                   <p className="text-gray-700 mb-2">
                     <strong>{t('impressum.phone')}:</strong> +36309713467
                   </p>
                   <p className="text-gray-700 mb-2">
                     <strong>{t('impressum.email')}:</strong> drszomorzsofia@gmail.com
+                  </p>
+                  <p className="text-gray-700 mb-2">
+                    <strong>{t('contact.address')}:</strong> 1137 Budapest, Szent István krt. 18. 2. em. 4/A. 15ös kapucsengő
                   </p>
                 </div>
               </div>

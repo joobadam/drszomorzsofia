@@ -42,6 +42,25 @@ export function Header1() {
                   {t('home.subtitle')}
                 </p>
               </div>
+              {/* Telefonszám és email cím */}
+              <div className="mb-6 md:mb-8 text-left">
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="tel:+36309713467"
+                    className="text-base text-primary font-semibold hover:underline w-fit"
+                    aria-label="Telefon: +36 30 971 3467"
+                  >
+                    +36 30 971 3467
+                  </a>
+                  <a
+                    href="mailto:drszomorzsofia@gmail.com"
+                    className="text-base text-primary font-semibold hover:underline w-fit"
+                    aria-label="Email: drszomorzsofia@gmail.com"
+                  >
+                    drszomorzsofia@gmail.com
+                  </a>
+                </div>
+              </div>
               <div>
                 <div className="flex flex-wrap gap-4">
                   <Button 

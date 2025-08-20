@@ -151,7 +151,7 @@
     "helpDescription": "Forduljon bizalommal hozzám, ha szakszerű, hatékony és precíz jogi segítségnyújtásra van szüksége a büntetőjog, cégeljárás, ingatlan adásvétel/ajándékozás, valamint a családjog területén.",
     "helpContactButton": "Kapcsolat",
     "servicesTitle": "Személyre szabott jogi szolgáltatások az Ön igényeire szabva",
-    "servicesDescription": "Ügyvédi praxisomban széles körű tapasztalattal nyújtok professzionális jogi segítséget a büntetőjog, cégeljárás, ingatlanjog, családjog és nemzetközi jog területeken. Minden ügyet személyre szabott figyelemmel és elhivatottsággal kezelek.",
+    "servicesDescription": "Ügyvédi praxisomban széles körű tapasztalattal nyújtok professzionális jogi segítséget a büntetőjog, cégeljárás, ingatlanjog és családjog területeken. Minden ügyet személyre szabott figyelemmel és elhivatottsággal kezelek.",
     "criminalDefense": "Büntetőjogi védelem",
     "criminalDefenseSubtitle": "Hatékony képviselet már a nyomozás kezdetétől",
     "criminalDefenseText": "Ügyfeleimet a büntetőeljárás minden szakaszában képviselem, jogszerűen és empátiával – a tisztességes eljárás biztosítása érdekében a nyomozástól a jogerős ítéletig.",
@@ -168,8 +168,8 @@
   },
   "about": {
     "title": "Rólam",
-    "description1": "Dr. Szomor Zsófia Anna LL.M. büntetőjogra és közlekedési jogra specializálódott ügyvéd, aki több éves tapasztalattal rendelkezik a jogi képviselet területén.",
-    "description2": "Szakmai pályafutásom során elsősorban büntetőjogi ügyekkel foglalkozom, különös tekintettel a közlekedési bűncselekményekre. Célom, hogy minden ügyfelem számára a lehető legjobb jogi képviseletet biztosítsam.",
+    "description1": "Dr. Szomor Zsófia Anna LL.M. büntetőjogra és közlekedési jogra specializálódott ügyvéd, aki több éves tapasztalattal rendelkezik ingatlanjog és általános cégügyek területén is.",
+    "description2": "Szakmai pályafutásom során elsősorban büntetőjogi ügyekkel foglalkozom, különös tekintettel a közlekedési bűncselekményekre, valamint átfogó jogi tudással rendelkezem az ingatlan és a cégjog területén. Célom, hogy minden ügyfelem számára a lehető legmagasabb színvonalú jogi képviseletet biztosítsam",
     "learnMoreButton": "Tudjon meg többet",
     "contactButton": "Kapcsolat",
     "valuesTitle": "Szakmaiság, empátia és elkötelezettség az Ön érdekeiért",
@@ -202,9 +202,9 @@
     "moreQuestionsText": "Forduljon hozzám bizalommal az elérhetőségeimen"
   },
   "services": {
-    "title": "Szolgáltatásaim",
-    "subtitle": "Komplex jogi szolgáltatások az Ön egyedi igényeire szabva.",
-    "europeanCourtTitle": "Képviselet az Európai Emberi Jogi Bíróság előtt",
+    "title": "Jogi Szolgáltatások",
+    "subtitle": "Szakértő jogi tanácsadás minden területen",
+    "europeanCourtTitle": "Képviselet a Strasbourgi Emberi Jogok Európai Bírósága előtt",
     "europeanCourtDescription1": "Az Emberi Jogok Európai Bírósága előtti eljárások különleges szakértelmet és tapasztalatot igényelnek. Dr. Szomor Zsófia Anna LL.M. vállalja Ügyfelei képviseletét ezen a nemzetközi fórumon is, biztosítva, hogy jogaik érvényesítése nemzetközi szinten is megtörténjen.",
     "europeanCourtDescription2": "A beadvány elkészítésétől a bírósági eljárás lefolytatásáig teljes körű támogatást nyújtok, legyen szó akár emberi jogi sérelmekről, akár magyar hatóságok döntéseinek felülvizsgálatáról.",
     "corporateTitle": "Cégalapítás és cégmódosítás jogi támogatással",
@@ -226,7 +226,37 @@
     "corporateServiceDescription": "Jogi támogatás és iratkészítés cégek alapításához, változásbejegyzéshez és az ehhez kapcsolódó ügyintézéshez.",
     "realEstateService": "Ingatlan adásvétel és ajándékozás",
     "realEstateServiceDescription": "Szerződéskészítés, jogi tanácsadás és teljes körű ügyintézés lakó- és üzleti ingatlanok átruházásához.",
-    "contactButton": "Kapcsolat"
+    "contactButton": "Kapcsolat",
+    "civil": {
+      "name": "Polgári jog",
+      "description": "Szerződések, kártérítés, tulajdonjogi viták rendezése szakértő jogi képviselettel.",
+      "cta": "Tudjon meg többet"
+    },
+    "criminal": {
+      "name": "Büntetőjog",
+      "description": "Büntetőeljárásokban való védelem és képviselet tapasztalt ügyvédekkel.",
+      "cta": "Tudjon meg többet"
+    },
+    "labor": {
+      "name": "Munkajog",
+      "description": "Munkahelyi jogviták, elbocsátások, munkaviszony rendezése.",
+      "cta": "Tudjon meg többet"
+    },
+    "family": {
+      "name": "Családjog",
+      "description": "Válóperek, gyermektartás, vagyonmegosztás és családi jogviták intézése.",
+      "cta": "Tudjon meg többet"
+    },
+    "realestate": {
+      "name": "Ingatlan adás-vétel",
+      "description": "Ingatlantranzakciók lebonyolítása, szerződések készítése és jogi háttér biztosítása.",
+      "cta": "Tudjon meg többet"
+    },
+    "corporate": {
+      "name": "Cégeljárás",
+      "description": "Cégalapítás, átalakulás, megszüntetés és társasági jogi tanácsadás.",
+      "cta": "Tudjon meg többet"
+    }
   },
   "realestate": {
     "title": "Ingatlan adásvétel és ajándékozás",
@@ -259,7 +289,8 @@
     "phoneNumber": "Telefonszám",
     "emailAddress": "Email cím",
     "callButton": "Hívás",
-    "emailButton": "Email"
+    "emailButton": "Email",
+    "address": "Cím"
   },
   "footer": {
     "home": "Kezdőlap",
@@ -270,7 +301,7 @@
     "facebook": "Facebook oldal",
     "instagram": "Instagram oldal",
     "linkedin": "LinkedIn profil",
-    "copyright": "© {year} Dr. Szomor Zsófia Anna. Minden jog fenntartva.",
+    "copyright": "Ezt a honlapot dr. Szomor Zsófia Anna a Budapesti Ügyvédi kamarában bejegyzett ügyvéd tarja fenn az ügyvédekre vonatkozó jogszabályok és belső szabályok szerint, melyek az ügyféljogokra vonatkozó tájékoztatással együtt a www.magyarugyvedikamara.hu honlapon találhatóak.",
     "impressum": "Impresszum",
     "legalNotice": "Jogi nyilatkozat",
     "cookieSettings": "Cookie beállítások"

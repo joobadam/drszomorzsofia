@@ -164,8 +164,12 @@ const Navbar = () => {
               className="flex items-center gap-3"
               onClick={handleLinkClick}
             >
-              <div className="relative w-8 h-8 md:w-10 md:h-10 bg-primary rounded-medium flex items-center justify-center group">
-                <Scale className="w-5 h-5 text-white group-hover:animate-pulse" />
+              <div className="relative w-8 h-8 md:w-10 md:h-10 bg-white rounded-medium flex items-center justify-center group">
+                <img
+                  src="/images/logo1.png"
+                  alt="Logo"
+                  className="w-5 h-5 md:w-7 md:h-7 object-contain"
+                />
                 <div className="absolute inset-0 bg-primary rounded-medium opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
               </div>
               <span className="text-md md:text-lg font-bold font-heading text-foreground">

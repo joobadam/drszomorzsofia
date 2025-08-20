@@ -8,26 +8,26 @@ import CookieConsent from "@/components/CookieConsent";
 
 // SEO-optimized metadata
 export const metadata = {
-  title: "Dr. Szomor Zsófia Anna | Ügyvédi Iroda – Polgári jog, családjog, ingatlanjog Budapesten",
+  title: "Dr. Szomor Zsófia Anna ügyvéd – büntetőjog, ingatlanjog, cégeljárás, családjog Budapesten",
   description:
-    "Dr. Szomor Zsófia Anna ügyvédi irodája Budapesten. Személyre szabott jogi tanácsadás, polgári jog, családjog, ingatlanjog, peres és peren kívüli képviselet. Vegye fel velünk a kapcsolatot bizalommal!",
+    "Dr. Szomor Zsófia Anna ügyvéd Budapesten. Büntetőjog, ingatlanjog, cégeljárás, családjog – személyre szabott jogi tanácsadás és képviselet. Forduljon hozzám bizalommal!",
   keywords:
-    "ügyvéd, jogi tanácsadás, polgári jog, családjog, ingatlanjog, ügyvédi iroda, Budapest, Dr. Szomor Zsófia Anna, jogi képviselet, peres ügyek, szerződés, jogász",
+    "ügyvéd, büntetőjog, ingatlanjog, cégeljárás, családjog, jogi tanácsadás, Budapest, Dr. Szomor Zsófia Anna, jogi képviselet, ügyvédi iroda",
   authors: [{ name: "Dr. Szomor Zsófia Anna" }],
   creator: "Dr. Szomor Zsófia Anna",
-  publisher: "Dr. Szomor Zsófia Anna Ügyvédi Iroda",
+  publisher: "Dr. Szomor Zsófia Anna Egyéni ügyvéd",
   openGraph: {
-    title: "Dr. Szomor Zsófia Anna | Ügyvédi Iroda – Polgári jog, családjog, ingatlanjog Budapesten",
+    title: "Dr. Szomor Zsófia Anna ügyvéd – büntetőjog, ingatlanjog, cégeljárás, családjog Budapesten",
     description:
-      "Személyre szabott jogi tanácsadás és képviselet Budapesten. Polgári jog, családjog, ingatlanjog, peres és peren kívüli ügyek. Vegye fel velünk a kapcsolatot!",
+      "Dr. Szomor Zsófia Anna ügyvéd Budapesten. Büntetőjog, ingatlanjog, cégeljárás, családjog – személyre szabott jogi tanácsadás és képviselet.",
     url: "https://drszomorzsofia.hu",
-    siteName: "Dr. Szomor Zsófia Anna Ügyvédi Iroda",
+    siteName: "Dr. Szomor Zsófia Anna Egyéni ügyvéd",
     images: [
       {
         url: "/images/6930F625-6A63-441B-BA7A-65C232D77FF9.jpeg",
         width: 1200,
         height: 630,
-        alt: "Dr. Szomor Zsófia Anna ügyvédi iroda",
+        alt: "Dr. Szomor Zsófia Anna Egyéni ügyvéd",
       },
     ],
     locale: "hu_HU",
@@ -35,9 +35,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Szomor Zsófia Anna | Ügyvédi Iroda – Polgári jog, családjog, ingatlanjog Budapesten",
+    title: "Dr. Szomor Zsófia Anna ügyvéd – büntetőjog, ingatlanjog, cégeljárás, családjog Budapesten",
     description:
-      "Személyre szabott jogi tanácsadás és képviselet Budapesten. Polgári jog, családjog, ingatlanjog, peres és peren kívüli ügyek.",
+      "Dr. Szomor Zsófia Anna ügyvéd Budapesten. Büntetőjog, ingatlanjog, cégeljárás, családjog – személyre szabott jogi tanácsadás és képviselet.",
     images: ["/images/6930F625-6A63-441B-BA7A-65C232D77FF9.jpeg"],
     creator: "@drszomorzsofia",
   },

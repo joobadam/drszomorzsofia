@@ -151,7 +151,7 @@
     "helpDescription": "Feel free to contact me if you need professional, efficient, and precise legal assistance in criminal law, corporate procedures, real estate transactions/gifts, and family law.",
     "helpContactButton": "Contact",
     "servicesTitle": "Personalized Legal Services Tailored to Your Needs",
-    "servicesDescription": "In my legal practice, I provide comprehensive professional legal assistance in criminal law, corporate procedures, real estate law, family law, and international law. I handle every case with personalized attention and dedication.",
+    "servicesDescription": "In my legal practice, I provide comprehensive professional legal assistance in criminal law, corporate procedures, real estate law and family law. I handle every case with personalized attention and dedication.",
     "criminalDefense": "Criminal Defense",
     "criminalDefenseSubtitle": "Effective representation from the start of investigation",
     "criminalDefenseText": "I represent my clients in every stage of criminal proceedings, legally and empathetically – to ensure fair proceedings from investigation to final judgment.",
@@ -168,8 +168,8 @@
   },
   "about": {
     "title": "About Me",
-    "description1": "Dr. Szomor Zsófia Anna LL.M. is an attorney specialized in criminal law and transportation law, with several years of experience in legal representation.",
-    "description2": "Throughout my professional career, I primarily deal with criminal law cases, with particular attention to traffic offenses. My goal is to provide the best possible legal representation for every client.",
+    "description1": "Dr. Zsófia Anna Szomor LL.M. is an attorney specialized in criminal law and traffic law, with several years of experience in real estate law and general corporate matters.",
+    "description2": "Throughout my professional career, I have primarily dealt with criminal law cases, with a particular focus on traffic-related offenses. I also possess comprehensive legal knowledge in the fields of real estate and corporate law. My goal is to provide the highest possible standard of legal representation for all my clients",
     "learnMoreButton": "Learn More",
     "contactButton": "Contact",
     "valuesTitle": "Professionalism, Empathy, and Commitment for Your Interests",
@@ -202,9 +202,9 @@
     "moreQuestionsText": "Feel free to contact me at my contact information"
   },
   "services": {
-    "title": "My Services",
-    "subtitle": "Comprehensive legal services tailored to your individual needs.",
-    "europeanCourtTitle": "Representation before the European Court of Human Rights",
+    "title": "Legal Services",
+    "subtitle": "Expert legal advice in all areas",
+    "europeanCourtTitle": "Representation before the European Court of Human Rights in Strasbourg",
     "europeanCourtDescription1": "Proceedings before the European Court of Human Rights require special expertise and experience. Dr. Szomor Zsófia Anna LL.M. undertakes to represent her clients at this international forum, ensuring that their rights are enforced at an international level.",
     "europeanCourtDescription2": "I provide comprehensive support from the preparation of the application to the conduct of court proceedings, whether it concerns human rights violations or the review of Hungarian authority decisions.",
     "corporateTitle": "Corporate Formation and Modification with Legal Support",
@@ -226,7 +226,37 @@
     "corporateServiceDescription": "Legal support and document preparation for corporate formation, change registration, and related matters.",
     "realEstateService": "Real Estate Purchase and Gift",
     "realEstateServiceDescription": "Contract preparation, legal advice, and comprehensive processing for residential and commercial real estate transfers.",
-    "contactButton": "Contact"
+    "contactButton": "Contact",
+    "civil": {
+      "name": "Civil Law",
+      "description": "Contract disputes, compensation claims, property rights with expert legal representation.",
+      "cta": "Learn more"
+    },
+    "criminal": {
+      "name": "Criminal Law",
+      "description": "Defense and representation in criminal proceedings with experienced attorneys.",
+      "cta": "Learn more"
+    },
+    "labor": {
+      "name": "Labor Law",
+      "description": "Workplace disputes, dismissals, employment relationship settlements.",
+      "cta": "Learn more"
+    },
+    "family": {
+      "name": "Family Law",
+      "description": "Divorce proceedings, child support, asset division and family legal disputes.",
+      "cta": "Learn more"
+    },
+    "realestate": {
+      "name": "Real Estate Transactions",
+      "description": "Property transactions, contract preparation and legal background support.",
+      "cta": "Learn more"
+    },
+    "corporate": {
+      "name": "Corporate Procedures",
+      "description": "Company formation, transformation, dissolution and corporate legal consulting.",
+      "cta": "Learn more"
+    }
   },
   "realestate": {
     "title": "Real Estate Purchase and Gift",
@@ -259,7 +289,8 @@
     "phoneNumber": "Phone Number",
     "emailAddress": "Email Address",
     "callButton": "Call",
-    "emailButton": "Email"
+    "emailButton": "Email",
+    "address": "Address"
   },
   "footer": {
     "home": "Home",
@@ -270,7 +301,7 @@
     "facebook": "Facebook page",
     "instagram": "Instagram page",
     "linkedin": "LinkedIn profile",
-    "copyright": "© {year} Dr. Szomor Zsófia Anna. All rights reserved.",
+   "copyright": "This website is maintained by Dr. Zsófia Anna Szomor, an attorney registered with the Budapest Bar Association, in accordance with the applicable laws and internal regulations governing attorneys, which, together with information on client rights, are available at www.magyarugyvedikamara.hu.",
     "impressum": "Imprint",
     "legalNotice": "Legal Notice",
     "cookieSettings": "Cookie Settings"
