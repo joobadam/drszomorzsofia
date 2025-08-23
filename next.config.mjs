@@ -12,7 +12,7 @@ const nextConfig = {
   
   // Environment variables for Sanity
   env: {
-    NEXT_PUBLIC_SANITY_PROJECT_ID: '0bk6d52j',
+    NEXT_PUBLIC_SANITY_PROJECT_ID: '4b6vfhb6',
     NEXT_PUBLIC_SANITY_DATASET: 'production',
   },
 };

@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'Dr. Szomor Zsófia - Tudástár',
 
-  projectId: '0bk6d52j',
+  projectId: '4b6vfhb6',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
