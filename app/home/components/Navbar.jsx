@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Scale } from "lucide-react";
@@ -9,6 +10,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 
 const Navbar = () => {
   const { t, currentLanguage, changeLanguage } = useLanguage();
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -27,8 +29,9 @@ const Navbar = () => {
     setIsDropdownOpen(false);
   };
 
-  const handleLanguageChange = (newLocale) => {
-    changeLanguage(newLocale);
+  const handleLanguageChange = async (newLocale) => {
+    await changeLanguage(newLocale);
+    // The router will automatically handle the locale change
   };
 
   // Handle scroll effect
@@ -119,20 +122,14 @@ const Navbar = () => {
     }
   };
 
-  // Use real routes
+  // Use correct routes without locale prefix
   const navigationLinks = [
     { href: "/", label: t('navigation.home') },
     { href: "/about", label: t('navigation.about') },
     { href: "/services", label: t('navigation.services') },
     { href: "/contact", label: t('navigation.contact') },
-    { href: "/knowledge-base", label: t('Blog') },
+    { href: "/knowledge-base", label: t('footer.knowledgeBase') },
   ];
-
-  // Debug: log the navigation labels
-  console.log('Navigation labels:', navigationLinks.map(link => link.label));
-  console.log('Current language:', currentLanguage);
-  console.log('Knowledge base translation:', t('navigation.knowledgeBase'));
-
 
   return (
     <motion.nav 

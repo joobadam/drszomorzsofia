@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useLanguage } from "@/hooks/useLanguage";
 
 export function Footer4() {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const handleNavClick = (section) => {

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.drszomorzsofia.hu
+
+# Sitemaps
+Sitemap: https://www.drszomorzsofia.hu/sitemap.xml

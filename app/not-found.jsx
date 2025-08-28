@@ -1,12 +1,12 @@
 'use client';
 
-import { useLanguage } from '@/hooks/useLanguage';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
 
 export default function NotFound() {
-  const { t } = useLanguage();
+  // Since this is a global not-found page, we'll use hardcoded text for now
+  // In a real implementation, you might want to detect the locale from the URL
 
   return (
     <div className="min-h-screen py-16">
@@ -38,11 +38,11 @@ export default function NotFound() {
             </div>
             
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              {t('notFound.title')}
+              Az oldal nem található
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-              {t('notFound.description')}
+              Sajnáljuk, a keresett oldal nem létezik vagy áthelyezésre került. Kérjük, ellenőrizze az URL-t, vagy használja az alábbi linkeket egy másik oldalra navigáláshoz.
             </p>
           </motion.div>
 
@@ -54,11 +54,11 @@ export default function NotFound() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Link
-              href="/"
+              href="/hu"
               className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors duration-200"
             >
               <Home className="w-5 h-5 mr-2" />
-              {t('notFound.backToHome')}
+              Vissza a főoldalra
             </Link>
             
             <button
@@ -66,7 +66,7 @@ export default function NotFound() {
               className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors duration-200"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
-              {t('notFound.goBack')}
+              Vissza
             </button>
           </motion.div>
 
@@ -78,59 +78,59 @@ export default function NotFound() {
             className="bg-gray-50 rounded-lg p-6 max-w-2xl mx-auto"
           >
             <h3 className="text-lg font-semibold text-gray-800 mb-4">
-              {t('notFound.helpfulLinks')}
+              Hasznos linkek
             </h3>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link
-                href="/services"
+                href="/hu/services"
                 className="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all duration-200"
               >
                 <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
                   <Search className="w-4 h-4 text-blue-600" />
                 </div>
                 <div className="text-left">
-                  <div className="font-medium text-gray-900">{t('notFound.services')}</div>
-                  <div className="text-sm text-gray-500">{t('notFound.servicesDescription')}</div>
+                  <div className="font-medium text-gray-900">Szolgáltatások</div>
+                  <div className="text-sm text-gray-500">Fedezze fel jogi szolgáltatásainkat</div>
                 </div>
               </Link>
               
               <Link
-                href="/contact"
+                href="/hu/contact"
                 className="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all duration-200"
               >
                 <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                   <Search className="w-4 h-4 text-green-600" />
                 </div>
                 <div className="text-left">
-                  <div className="font-medium text-gray-900">{t('notFound.contact')}</div>
-                  <div className="text-sm text-gray-500">{t('notFound.contactDescription')}</div>
+                  <div className="font-medium text-gray-900">Kapcsolat</div>
+                  <div className="text-sm text-gray-500">Lépjen kapcsolatba velünk</div>
                 </div>
               </Link>
               
               <Link
-                href="/about"
+                href="/hu/about"
                 className="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all duration-200"
               >
                 <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
                   <Search className="w-4 h-4 text-orange-600" />
                 </div>
                 <div className="text-left">
-                  <div className="font-medium text-gray-900">{t('notFound.about')}</div>
-                  <div className="text-sm text-gray-500">{t('notFound.aboutDescription')}</div>
+                  <div className="font-medium text-gray-900">Rólunk</div>
+                  <div className="text-sm text-gray-500">Tudjon meg többet irodánkról</div>
                 </div>
               </Link>
               
               <Link
-                href="/legal-notice"
+                href="/hu/legal-notice"
                 className="flex items-center p-3 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all duration-200"
               >
                 <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
                   <Search className="w-4 h-4 text-purple-600" />
                 </div>
                 <div className="text-left">
-                  <div className="font-medium text-gray-900">{t('notFound.legal')}</div>
-                  <div className="text-sm text-gray-500">{t('notFound.legalDescription')}</div>
+                  <div className="font-medium text-gray-900">Jogi nyilatkozat</div>
+                  <div className="text-sm text-gray-500">Fontos jogi információk</div>
                 </div>
               </Link>
             </div>
