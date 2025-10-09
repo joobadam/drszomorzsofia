@@ -107,7 +107,7 @@ export function Layout4() {
           <AnimatedGroup preset="blur-slide" staggerDelay={0.1}>
             <div>
               <img
-                src="/images/6930F625-6A63-441B-BA7A-65C232D77FF9.jpeg"
+                src="/images/image2.jpeg"
                 className="w-full h-[400px] md:h-[500px] rounded-medium object-cover shadow-lg"
                 alt="Dr. Szomor Zsófia Anna ügyvédi iroda - személyes konzultáció"
                 loading="lazy"

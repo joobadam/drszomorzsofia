@@ -24,9 +24,12 @@ export function Layout90() {
               <p className="text-medium text-neutral-dark leading-relaxed mb-4">
                 {t('services.criminalDescription1')}
               </p>
-              
               <p className="text-medium text-neutral-dark leading-relaxed mb-4">
                 {t('services.criminalDescription2')}
+              </p>
+              
+              <p className="text-medium text-neutral-dark leading-relaxed mb-4">
+                {t('services.criminalDescription3')}
               </p>
               
               <p className="text-medium text-neutral-dark leading-relaxed">

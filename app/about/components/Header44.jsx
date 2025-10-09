@@ -12,68 +12,86 @@ export function Header44() {
   return (
     <section id="about" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <div className="w-full max-w-lg">
-          <AnimatedGroup preset="blur-slide" staggerDelay={0.2}>
-            <div>
-              <h2 className="heading-h1 mb-5 font-bold md:mb-6 text-foreground">
-                {t('about.title')}
-              </h2>
-            </div>
-            
-            <div>
-              <p className="text-medium text-neutral-dark mb-6 leading-relaxed">
-                {t('about.description1')}
-              </p>
+        <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-16 lg:items-center">
+          {/* Left: Text content */}
+          <div className="order-2 lg:order-1 w-full max-w-lg">
+            <AnimatedGroup preset="blur-slide" staggerDelay={0.2}>
+              <div>
+                <h2 className="heading-h1 mb-5 font-bold md:mb-6 text-foreground">
+                  {t('about.title')}
+                </h2>
+              </div>
               
-              <p className="text-medium text-neutral-dark mb-6 leading-relaxed">
-                {t('about.description2')}
-              </p>
-            </div>
+              <div>
+                <p className="text-medium text-neutral-dark mb-6 leading-relaxed">
+                  {t('about.description1')}
+                </p>
+                
+                <p className="text-medium text-neutral-dark mb-6 leading-relaxed">
+                  {t('about.description2')}
+                </p>
+              </div>
 
-            {/* Telefonszám és email cím */}
-            <div className="mb-6 text-left">
-              <div className="flex flex-col gap-1">
-                <a
-                  href="tel:+36309713467"
-                  className="text-base text-primary font-semibold hover:underline w-fit"
-                  aria-label="Telefon: +36 30 971 3467"
-                >
-                  +36 30 971 3467
-                </a>
-                <a
-                  href="mailto:drszomorzsofia@gmail.com"
-                  className="text-base text-primary font-semibold hover:underline w-fit"
-                  aria-label="Email: drszomorzsofia@gmail.com"
-                >
-                  drszomorzsofia@gmail.com
-                </a>
-              </div>
-            </div>
-            
-            <div>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/services" passHref legacyBehavior>
-                  <Button
-                    as="a"
-                    className="bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 h-auto rounded-medium transition-all duration-200"
-                    aria-label="További információ a szolgáltatásokról"
+              {/* Telefonszám és email cím */}
+              <div className="mb-6 text-left">
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="tel:+36309713467"
+                    className="text-base text-primary font-semibold hover:underline w-fit"
+                    aria-label="Telefon: +36 30 971 3467"
                   >
-                    {t('about.learnMoreButton')}
-                  </Button>
-                </Link>
-                <Link href="/contact" passHref legacyBehavior>
-                  <Button
-                    as="a"
-                    variant="outline"
-                    className="border border-primary hover:bg-primary hover:text-white text-primary font-medium px-6 py-3 h-auto rounded-medium transition-all duration-200 bg-transparent"
-                    aria-label="Kapcsolatfelvétel"
+                    +36 30 971 3467
+                  </a>
+                  <a
+                    href="mailto:drszomorzsofia@gmail.com"
+                    className="text-base text-primary font-semibold hover:underline w-fit"
+                    aria-label="Email: drszomorzsofia@gmail.com"
                   >
-                    {t('about.contactButton')}
-                  </Button>
-                </Link>
+                    drszomorzsofia@gmail.com
+                  </a>
+                </div>
               </div>
-            </div>
-          </AnimatedGroup>
+              
+              <div>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/services" passHref legacyBehavior>
+                    <Button
+                      as="a"
+                      className="bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 h-auto rounded-medium transition-all duration-200"
+                      aria-label="További információ a szolgáltatásokról"
+                    >
+                      {t('about.learnMoreButton')}
+                    </Button>
+                  </Link>
+                  <Link href="/contact" passHref legacyBehavior>
+                    <Button
+                      as="a"
+                      variant="outline"
+                      className="border border-primary hover:bg-primary hover:text-white text-primary font-medium px-6 py-3 h-auto rounded-medium transition-all duration-200 bg-transparent"
+                      aria-label="Kapcsolatfelvétel"
+                    >
+                      {t('about.contactButton')}
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </AnimatedGroup>
+          </div>
+
+          {/* Right: Image */}
+          <div className="order-1 lg:order-2 w-full">
+            <AnimatedGroup preset="scale-fade" staggerDelay={0.1}>
+              <div className="relative w-full">
+                <img
+                  src="/images/image1.jpeg"
+                  alt="Rólam"
+                  className="w-full h-64 md:h-80 lg:h-[520px] rounded-medium object-cover shadow-lg"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 rounded-medium bg-gradient-to-tr from-primary/5 to-transparent pointer-events-none" />
+              </div>
+            </AnimatedGroup>
+          </div>
         </div>
       </div>
     </section>
