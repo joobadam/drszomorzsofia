@@ -42,7 +42,7 @@ export function Layout90() {
         <AnimatedGroup preset="blur-slide" staggerDelay={0.1}>
           <div>
             <img
-              src="/images/wesley-tingey-TdNLjGXVH3s-unsplash.jpg"
+              src="/images/kalapacs.jpg"
               className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-medium object-cover shadow-lg"
               alt="Büntetőjogi védelem és képviselet - tárgyalóterem és igazságszolgáltatás"
               loading="lazy"

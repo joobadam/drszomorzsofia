@@ -49,7 +49,7 @@ export function Layout89() {
 
           <div className="relative">
             <motion.img
-              src="/images/handshake.jpg"
+              src="/images/kezfogas.jpg"
               className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-medium object-cover shadow-lg"
               alt="Professzionális jogi segítségnyújtás - kézfogás üzleti környezetben"
               loading="lazy"

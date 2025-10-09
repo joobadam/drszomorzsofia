@@ -50,7 +50,7 @@ const features = [
     background: (
       <div className="absolute inset-0 overflow-hidden rounded-xl">
         <img 
-          src="/images/lawyer1.jpg" 
+          src="/images/ugyved1.jpg" 
           alt="Munkajogi ügyek és munkahelyi viták - szakértő jogi segítség"
           className="h-full w-full object-cover"
         />
@@ -68,7 +68,7 @@ const features = [
     background: (
       <div className="absolute inset-0 overflow-hidden rounded-xl">
         <img 
-          src="/images/patricia-prudente-6UyWK8mDcWo-unsplash.jpg" 
+          src="/images/csalad.jpg" 
           alt="Családjogi ügyek és válóperek - empátiával és szakértelemmel"
           className="h-full w-full object-cover"
         />
@@ -86,7 +86,7 @@ const features = [
     background: (
       <div className="absolute inset-0 overflow-hidden rounded-xl">
         <img 
-          src="/images/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg" 
+          src="/images/ingatlan.jpg" 
           alt="Ingatlanjogi ügyek és ingatlantranzakciók - biztonságos jogi háttér"
           className="h-full w-full object-cover"
         />

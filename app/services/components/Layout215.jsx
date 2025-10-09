@@ -16,7 +16,7 @@ export function Layout215() {
           <AnimatedGroup preset="blur-slide" staggerDelay={0.1}>
             <div className="order-2 md:order-1">
               <img
-                src="/images/lycs-architecture-U2BI3GMnSSE-unsplash.jpg"
+                src="/images/munka.jpg"
                 className="w-full h-[400px] md:h-[500px] rounded-medium object-cover shadow-lg"
                 alt="Cégalapítás és cégjogi szolgáltatások - üzleti dokumentumok és szerződések"
                 loading="lazy"

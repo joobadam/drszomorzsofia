@@ -29,7 +29,7 @@ export function Layout25() {
           <AnimatedGroup preset="blur-slide" staggerDelay={0.1}>
             <div>
               <img
-                src="/images/christian-lue-8Yw6tsB8tnc-unsplash.jpg"
+                src="/images/eu.jpg"
                 className="w-full h-[400px] md:h-[500px] rounded-medium object-cover shadow-lg"
                 alt="Európai Emberi Jogi Bíróság képviselet - nemzetközi jogi eljárások"
                 loading="lazy"
