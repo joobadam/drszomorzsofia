@@ -5,6 +5,9 @@ import { LanguageProvider } from "@/hooks/useLanguage";
 import { Footer4 } from "./home/components/Footer4";
 import Navbar from "./home/components/Navbar";
 import CookieConsent from "@/components/CookieConsent";
+import Script from "next/script";
+
+const GA_ADS_ID = process.env.NEXT_PUBLIC_GA_ADS_ID || "AW-17637991285";
 
 // SEO-optimized metadata
 export const metadata = {
@@ -78,6 +81,34 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen relative overflow-x-hidden bg-white`}
       >
+        {/* Consent Mode v2 defaults (must run before gtag) */}
+        <Script id="consent-defaults" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'analytics_storage': 'denied'
+            });
+          `}
+        </Script>
+
+        {/* Google Ads (gtag.js) */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('js', new Date());
+            gtag('config', '${GA_ADS_ID}');
+          `}
+        </Script>
+
         {/* Purple Glow Top Background */}
         <div
           aria-hidden="true"

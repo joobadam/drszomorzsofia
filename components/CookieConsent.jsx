@@ -16,15 +16,30 @@ const CookieConsent = () => {
     preferences: false
   });
 
+  // Helper: update Google Consent Mode
+  const updateConsentMode = (prefs) => {
+    if (typeof window === 'undefined') return;
+    const gtag = window.gtag || function(){ (window.dataLayer = window.dataLayer || []).push(arguments); };
+    gtag('consent', 'update', {
+      'ad_storage': prefs.marketing ? 'granted' : 'denied',
+      'ad_user_data': prefs.marketing ? 'granted' : 'denied',
+      'ad_personalization': prefs.marketing ? 'granted' : 'denied',
+      'analytics_storage': prefs.analytics ? 'granted' : 'denied'
+    });
+  };
+
   // Delay showing the consent by 3 seconds
   useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
-      const timer = setTimeout(() => {
-        setShowConsent(true);
-      }, 3000);
-      return () => clearTimeout(timer);
+    const stored = localStorage.getItem('cookieConsent');
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      setCookiePreferences(parsed);
+      // Apply stored consent immediately
+      updateConsentMode(parsed);
+      return;
     }
+    const timer = setTimeout(() => setShowConsent(true), 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleAcceptAll = () => {
@@ -36,11 +51,13 @@ const CookieConsent = () => {
     };
     setCookiePreferences(allAccepted);
     localStorage.setItem('cookieConsent', JSON.stringify(allAccepted));
+    updateConsentMode(allAccepted);
     setShowConsent(false);
   };
 
   const handleAcceptSelected = () => {
     localStorage.setItem('cookieConsent', JSON.stringify(cookiePreferences));
+    updateConsentMode(cookiePreferences);
     setShowConsent(false);
   };
 
@@ -53,6 +70,7 @@ const CookieConsent = () => {
     };
     setCookiePreferences(onlyNecessary);
     localStorage.setItem('cookieConsent', JSON.stringify(onlyNecessary));
+    updateConsentMode(onlyNecessary);
     setShowConsent(false);
   };
 
@@ -98,40 +116,31 @@ const CookieConsent = () => {
                   <p className="text-gray-600 text-sm leading-relaxed">
                     {t('cookieConsent.description')}
                   </p>
-                  <div className="flex items-center gap-4 mt-3">
-                    <button
-                      onClick={() => setShowSettings(true)}
-                      className="text-purple-600 hover:text-purple-700 text-sm font-medium flex items-center gap-2"
-                    >
-                      <Settings className="w-4 h-4" />
-                      {t('cookieConsent.customize')}
-                    </button>
-                    <a
-                      href="/privacy-policy"
-                      className="text-gray-500 hover:text-gray-700 text-sm"
-                    >
-                      {t('cookieConsent.privacyPolicy')}
-                    </a>
-                  </div>
                 </div>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setShowSettings(true)}
+                  className="px-4 py-2 text-sm font-medium rounded-medium bg-gray-100 hover:bg-gray-200 text-gray-800"
+                >
+                  {t('cookieConsent.customize')}
+                </button>
                 <button
                   onClick={handleRejectAll}
-                  className="px-6 py-2.5 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors"
+                  className="px-4 py-2 text-sm font-medium rounded-medium bg-gray-100 hover:bg-gray-200 text-gray-800"
                 >
                   {t('cookieConsent.rejectAll')}
                 </button>
                 <button
                   onClick={handleAcceptSelected}
-                  className="px-6 py-2.5 text-white bg-purple-800 hover:bg-purple-700 rounded-lg font-medium transition-colors"
+                  className="px-4 py-2 text-sm font-medium rounded-medium bg-primary/90 hover:bg-primary text-white"
                 >
                   {t('cookieConsent.acceptSelected')}
                 </button>
                 <button
                   onClick={handleAcceptAll}
-                  className="px-6 py-2.5 text-white bg-primary hover:bg-green-800 rounded-lg font-medium transition-colors"
+                  className="px-4 py-2 text-sm font-medium rounded-medium bg-primary hover:bg-primary-dark text-white"
                 >
                   {t('cookieConsent.acceptAll')}
                 </button>
@@ -139,132 +148,99 @@ const CookieConsent = () => {
             </div>
           ) : (
             // Settings view
-            <div className="space-y-6">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-gray-900 flex items-center gap-2">
-                  <Settings className="w-5 h-5 text-purple-800" />
-                  {t('cookieConsent.settings')}
-                </h3>
-                <button
-                  onClick={() => setShowSettings(false)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-              
-              <div className="space-y-4">
-                {/* Necessary cookies */}
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                  <div className="flex items-start gap-3">
-                    <Shield className="w-5 h-5 text-green-600 mt-0.5" />
-                    <div>
-                      <h4 className="font-medium text-gray-900">
-                        {t('cookieConsent.necessary.title')}
-                      </h4>
-                      <p className="text-sm text-gray-600 mt-1">
-                        {t('cookieConsent.necessary.description')}
-                      </p>
-                    </div>
+            <div className="grid grid-cols-1 gap-6">
+              <button
+                onClick={() => setShowSettings(false)}
+                className="text-sm text-gray-600 hover:text-gray-800 w-fit"
+              >
+                ← {t('cookieConsent.back')}
+              </button>
+
+              {/* Toggles */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Necessary (locked) */}
+                <div className="border rounded-medium p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Shield className="w-4 h-4 text-gray-700" />
+                    <span className="font-semibold">{t('cookieConsent.necessary.title')}</span>
                   </div>
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={cookiePreferences.necessary}
-                      disabled
-                      className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500"
-                    />
-                  </div>
+                  <p className="text-sm text-gray-600 mb-3">{t('cookieConsent.necessary.description')}</p>
+                  <label className="inline-flex items-center gap-2 text-sm">
+                    <input type="checkbox" checked disabled />
+                    <span>Required</span>
+                  </label>
                 </div>
 
-                {/* Analytics cookies */}
-                <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
-                  <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">
-                        {t('cookieConsent.analytics.title')}
-                      </h4>
-                      <p className="text-sm text-gray-600 mt-1">
-                        {t('cookieConsent.analytics.description')}
-                      </p>
-                    </div>
+                {/* Analytics */}
+                <div className="border rounded-medium p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Settings className="w-4 h-4 text-gray-700" />
+                    <span className="font-semibold">{t('cookieConsent.analytics.title')}</span>
                   </div>
-                  <div className="flex items-center">
+                  <p className="text-sm text-gray-600 mb-3">{t('cookieConsent.analytics.description')}</p>
+                  <label className="inline-flex items-center gap-2 text-sm">
                     <input
                       type="checkbox"
                       checked={cookiePreferences.analytics}
                       onChange={() => togglePreference('analytics')}
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
                     />
-                  </div>
+                    <span>{t('cookieConsent.acceptSelected')}</span>
+                  </label>
                 </div>
 
-                {/* Marketing cookies */}
-                <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
-                  <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center mt-0.5">
-                      <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">
-                        {t('cookieConsent.marketing.title')}
-                      </h4>
-                      <p className="text-sm text-gray-600 mt-1">
-                        {t('cookieConsent.marketing.description')}
-                      </p>
-                    </div>
+                {/* Marketing */}
+                <div className="border rounded-medium p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Settings className="w-4 h-4 text-gray-700" />
+                    <span className="font-semibold">{t('cookieConsent.marketing.title')}</span>
                   </div>
-                  <div className="flex items-center">
+                  <p className="text-sm text-gray-600 mb-3">{t('cookieConsent.marketing.description')}</p>
+                  <label className="inline-flex items-center gap-2 text-sm">
                     <input
                       type="checkbox"
                       checked={cookiePreferences.marketing}
                       onChange={() => togglePreference('marketing')}
-                      className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                     />
-                  </div>
+                    <span>{t('cookieConsent.acceptSelected')}</span>
+                  </label>
                 </div>
 
-                {/* Preferences cookies */}
-                <div className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
-                  <div className="flex items-start gap-3">
-                    <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mt-0.5">
-                      <div className="w-2 h-2 bg-purple-800 rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">
-                        {t('cookieConsent.preferences.title')}
-                      </h4>
-                      <p className="text-sm text-gray-600 mt-1">
-                        {t('cookieConsent.preferences.description')}
-                      </p>
-                    </div>
+                {/* Preferences */}
+                <div className="border rounded-medium p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Settings className="w-4 h-4 text-gray-700" />
+                    <span className="font-semibold">{t('cookieConsent.preferences.title')}</span>
                   </div>
-                  <div className="flex items-center">
+                  <p className="text-sm text-gray-600 mb-3">{t('cookieConsent.preferences.description')}</p>
+                  <label className="inline-flex items-center gap-2 text-sm">
                     <input
                       type="checkbox"
                       checked={cookiePreferences.preferences}
                       onChange={() => togglePreference('preferences')}
-                      className="w-4 h-4 text-purple-800 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
                     />
-                  </div>
+                    <span>{t('cookieConsent.acceptSelected')}</span>
+                  </label>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-200">
+              <div className="flex items-center justify-end gap-2">
                 <button
-                  onClick={() => setShowSettings(false)}
-                  className="px-6 py-2.5 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors"
+                  onClick={handleRejectAll}
+                  className="px-4 py-2 text-sm font-medium rounded-medium bg-gray-100 hover:bg-gray-200 text-gray-800"
                 >
-                  {t('cookieConsent.back')}
+                  {t('cookieConsent.rejectAll')}
                 </button>
                 <button
                   onClick={handleAcceptSelected}
-                  className="px-6 py-2.5 text-white bg-purple-800 hover:bg-purple-700 rounded-lg font-medium transition-colors"
+                  className="px-4 py-2 text-sm font-medium rounded-medium bg-primary/90 hover:bg-primary text-white"
                 >
                   {t('cookieConsent.savePreferences')}
+                </button>
+                <button
+                  onClick={handleAcceptAll}
+                  className="px-4 py-2 text-sm font-medium rounded-medium bg-primary hover:bg-primary-dark text-white"
+                >
+                  {t('cookieConsent.acceptAll')}
                 </button>
               </div>
             </div>
